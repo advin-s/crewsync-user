@@ -6,5 +6,5 @@ import { getSingleSpaExtraProviders } from 'single-spa-angular';
 import { APP_BASE_HREF } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), getSingleSpaExtraProviders(),{provide:APP_BASE_HREF, useValue:'/'}]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),getSingleSpaExtraProviders(),{provide:APP_BASE_HREF, useValue:'/'}]
 };

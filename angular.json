@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "crewsync-user": {
+    "user": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/crewsync-user",
+            "outputPath": "dist/user",
             "index": "src/index.html",
             "polyfills": [
               "zone.js"
@@ -37,10 +37,10 @@
             "main": "src/main.single-spa.ts",
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "crewsync-user",
+              "libraryName": "user",
               "libraryTarget": "umd"
             },
-            "deployUrl": "http://localhost:9002/"
+            "deployUrl": "http://localhost:4200/"
           },
           "configurations": {
             "production": {
@@ -71,10 +71,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "crewsync-user:build:production"
+              "buildTarget": "user:build:production"
             },
             "development": {
-              "buildTarget": "crewsync-user:build:development"
+              "buildTarget": "user:build:development"
             }
           },
           "defaultConfiguration": "development"
